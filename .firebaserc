@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "portailweb-c70a1": {
+      "hosting": {
+        "portail-web": [
+          "portailweb-c70a1"
+        ]
+      }
+    }
+  }
+}

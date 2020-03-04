@@ -1,0 +1,12 @@
+<mat-card style="max-width: 400px;">
+  <mat-card-header>
+    <mat-card-title>
+      &nbsp;{{news.titre}}
+      {{news.date}}
+  </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+
+    <div [innerHTML]= "news.contenu"></div>
+  </mat-card-content>
+</mat-card>
