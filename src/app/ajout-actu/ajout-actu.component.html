@@ -1,29 +1,32 @@
 
 
 <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-<mat-card style="max-width:10%; margin-left: auto; margin-right: auto; margin-top: 15%;" >
+<img src="../../assets/images/Capture4.PNG" alt="" style=" margin-left: 30%; width:20%; margin-top:15%; height : 500px;">
+<mat-card style="max-width:18%; margin-top: -29.7%; margin-left:50%; height:470px; margin-bottom: 10%;;" >
 
   <mat-card-header>
-    <mat-card-title>Ajout d'actualité</mat-card-title>
-    <mat-card-subtitle>Fill this form</mat-card-subtitle>
+    <div style="margin-left: 3%;"><h2 style="color: #048b9a;" >Ajouter une actualité</h2> </div>
+
   </mat-card-header>
   <mat-card-content>
-      <mat-form-field class="example-full-width" >
-        <input matInput type="text" formControlName="titre" placeholder="Titre de l'article" required >
+      <mat-form-field class="example-full-width" style="width:100%;">
+        <textarea matInput type="text" formControlName="titre" placeholder="Titre de l'article" required ></textarea>
+
       </mat-form-field>
       <br>
 
-      <mat-form-field class="example-full-width">
-        <input matInput  type="text" formControlName="date" placeholder="Date" required>
+      <mat-form-field class="example-full-width" style="width:100%;">
+        <textarea matInput  type="text" formControlName="date" placeholder="Date" required></textarea>
       </mat-form-field>
       <br>
 
-      <mat-form-field class="example-full-width">
-        <input matInput  type="text" formControlName="contenu" placeholder="Contenu" required>
+      <mat-form-field class="example-full-width" style="width:100%;">
+        <textarea matInput  type="text" formControlName="contenu" placeholder="Contenu" required></textarea>
       </mat-form-field>
       <br>
 
-      <button mat-raised-button color="primary" [disabled]="profileForm.invalid" type="submit">Créer l'actualité</button>
+      <button mat-raised-button style="background-color: #048b9a; width:35%; margin-left:33%" [disabled]="profileForm.invalid" type="submit">Créer</button>
+
 
   </mat-card-content>
 

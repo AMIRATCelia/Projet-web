@@ -19,19 +19,19 @@ export class UserService {
     return this.Auth.authState;
   }
 
-  login( email, password) {
-    console.log(`aaaaaaaaaaaaa`);
+  login(email: string, password: string) {
+   // debugger;
     this.Auth.auth.signInWithEmailAndPassword(email, password)
+    .then(userCredential => {
+      //debugger;
+      if(userCredential) {
+        this.router.navigate(['/dashboard']);
+      }
+    })
       .catch(error => {
+        //debugger;
         this.eventAuthError.next(error);
-        console.log(`aaaaaaaaaaaaa`);
-      })
-      .then(userCredential => {
-        if(userCredential) {
-          this.router.navigate(['/menu']);
-          console.log(`bbbbbbbbbbbb`);
-        }
-      })
+      });
   }
 
   logout() {

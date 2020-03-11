@@ -4,15 +4,12 @@ import { Validators } from '@angular/forms';
 import { UserService } from './../logService';
 import { AngularFireAuth } from '@angular/fire/auth';
 
-
-
-
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
   providers : [AngularFireAuth]
+
 })
 export class LoginComponent implements OnInit {
 
@@ -28,12 +25,9 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(`Mail : ${this.loginform.value.Email}`);
-    console.log(`PassWord : ${this.loginform.value.Password}`);
-  }
-  login(loginForm) {
     console.log(`aaaaaaaaaaaaa`);
-    this.authuser.login(loginForm.value.Email, loginForm.value.Password);
+    //debugger;
+    this.authuser.login(this.loginform.value.Email, this.loginform.value.Password);
     console.log(`bbbbbbbbbbbb`);
   }
   logout() {

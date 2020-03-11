@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFirestoreModule, AngularFirestoreCollection } from '@angular/fire/firestore';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -35,6 +35,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFireAuthGuardModule } from '@angular/fire/auth-guard';
 
 
 
@@ -79,7 +80,8 @@ import { AngularFireAuth } from '@angular/fire/auth';
     RouterModule.forRoot(appRoutes),
     MatTreeModule,
     MatGridListModule,
-    MatMenuModule
+    MatMenuModule,
+    AngularFireAuthGuardModule
 
 
 

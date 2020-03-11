@@ -1,4 +1,4 @@
-<mat-card style="max-width: 400px;">
+<!-- <mat-card class="actu" style="max-width: 400px;">
   <mat-card-header>
     <mat-card-title>
       &nbsp;{{news.titre}}
@@ -9,4 +9,24 @@
 
     <div [innerHTML]= "news.contenu"></div>
   </mat-card-content>
+</mat-card> -->
+
+<mat-card class="actu" style="height:230px;">
+  <mat-card-header>
+
+    <div mat-card-avatar style="background-size: cover;">
+      <img mat-card-image src="../../assets/images/Capture6.PNG" style="width:120%; margin-top:5%; margin-left: 5%;  ">
+    </div>
+    <mat-card-title style="color: #048b9a;">
+      {{news.titre}}
+  </mat-card-title>
+
+  </mat-card-header>
+  <mat-card-content style="margin-left: 10%;">
+    Date :  {{news.date}}
+  </mat-card-content>
+  <mat-card-content style="margin-left: 10%;">
+    Contenu : <div [innerHTML]= "news.contenu"></div>
+  </mat-card-content>
 </mat-card>
+
