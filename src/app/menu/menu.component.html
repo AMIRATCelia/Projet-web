@@ -11,12 +11,14 @@
       <a mat-list-item  [routerLink]="['/users']"><b><i>Liste des utilisateurs</i></b></a>
       <a mat-list-item routerLink="/addActu" routerLinkActive="active"><b><i>Ajouter une actualité</i></b></a>
       <a mat-list-item routerLink="/actualite" routerLinkActive="active"><b><i>Liste des actualités</i></b></a>
+
     </mat-nav-list>
 
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar style="background-color: #048b9a;">
       <span style="margin-left:43%; color: azure;"><i><b>PORTAIL WEB D'ENTREPRISE</b></i></span>
+      <button mat-raised-button style="background-color:  azure; margin-left: 33%; color:#048b9a" (click)="logout()"><b>Logout</b></button>
     </mat-toolbar>
 
     <router-outlet></router-outlet>
